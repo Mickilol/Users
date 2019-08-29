@@ -1,0 +1,9 @@
+.home-page {
+    padding: 0 10px;
+}
+
+.home-page__nav {
+    display: flex;
+    flex-direction: column;
+
+}
