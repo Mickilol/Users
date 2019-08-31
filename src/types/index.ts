@@ -1,6 +1,6 @@
 export interface State {
   users: UserState[];
-  isFetchUserDataBtnDisabled: boolean;
+  fetchUserDataErrorMessage: string;
   fetchedUserData?: FetchedUserDataState;
 }
 
@@ -9,7 +9,7 @@ export interface UserState {
   email: string;
   name: string;
   group: string;
-  comment: string;
+  comment?: string;
 }
 
 export interface FetchedUserDataState {

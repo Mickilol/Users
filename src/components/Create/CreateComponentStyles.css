@@ -1,0 +1,110 @@
+.create-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+
+.create-page__title {
+    text-align: center;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.form-wrapper .field-label {
+    display: inline-block;
+    width: 112px;
+}
+
+.field-wrapper {
+    display: flex;
+}
+
+.field-wrapper:not(:first-child) {
+    margin-top: 15px;
+}
+
+.field-label {
+    padding-right: 15px;
+}
+
+.field-input,
+.field-textarea,
+.field-select {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.field-input:focus,
+.field-textarea:focus,
+.field-select:focus {
+    outline: none;
+}
+
+.field-textarea {
+    resize: none;
+    height: 50px;
+    width: 200px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.field-select {
+    width: 200px;
+}
+
+.buttons-wrapper {
+    text-align: center;
+}
+
+.fetched-user-data {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.fetched-user-data__title {
+    margin: 0 0 15px;
+}
+
+.fetched-user-data__list-item:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.fetched-user-data__list-item > label {
+    display: inline-block;
+    width: 105px;
+    padding-right: 10px;
+}
+
+.fetched-user-data__error {
+    text-align: center;
+    color: #b8391c;
+}
+
+.button {
+    background: none;
+    padding: 10px;
+    margin-top: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:active {
+    background: #f6f6f6;
+}
+
+.button:disabled {
+    background: #dedede;
+}

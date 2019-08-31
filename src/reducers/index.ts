@@ -1,25 +1,42 @@
 import { State } from '../types';
-import { ADD_USER, CHANGE_FETCH_USER_DATA_BTN_DISABLE, myAction } from '../actions';
+import {
+  ADD_USER,
+  FETCH_USER_DATA_FAILURE,
+  FETCH_USER_DATA_SUCCESS,
+  IAction
+} from '../actions';
 
 const initialState: State = {
   users: [],
-  isFetchUserDataBtnDisabled: false
+  fetchUserDataErrorMessage: '',
 };
 
-export default (state = initialState, action: myAction): State => {
+export default (state = initialState, action: IAction): State => {
   switch (action.type) {
-    case CHANGE_FETCH_USER_DATA_BTN_DISABLE: {
+
+    case FETCH_USER_DATA_SUCCESS: {
       return {
         ...state,
-        isFetchUserDataBtnDisabled: action.isDisabled
+        fetchUserDataErrorMessage: '',
+        fetchedUserData: action.userData
+      }
+    }
+
+    case FETCH_USER_DATA_FAILURE: {
+      return {
+        ...state,
+        fetchedUserData: undefined,
+        fetchUserDataErrorMessage: 'Пользователь с заданным логином не найден'
       }
     }
 
     case ADD_USER: {
-      console.log('add user action', action);
-
       return {
-        ...state
+        ...state,
+        users: [
+          ...state.users,
+          action.payload
+        ]
       }
     }
 

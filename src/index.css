@@ -5,9 +5,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.home-link {
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  font-size: 16px;
+}
+
+.home-link > a {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #000;
+  border: 1px solid #cccccc;
+  border-radius: 15px;
+}
+
+.home-link > a:active {
+  background: #f6f6f6;
+}
+
